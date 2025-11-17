@@ -43,48 +43,70 @@
   <main class="container mx-auto px-4 py-16">
 
     <!-- Pratos -->
-    <section id="pratos" class="mb-32">
-      <h2 class="text-4xl font-bold text-primary text-center mb-12">Pratos Tradicionais</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section id="pratos" class="mb-32">
+  <h2 class="text-4xl font-bold text-primary text-center mb-12">Pratos Portugueses</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <script>
+      const pratos = [
+        {nome:"Bacalhau à Brás", desc:"Bacalhau desfiado com batata palha, ovos e azeitonas", preco:"€12.50", img:"https://tse1.mm.bing.net/th/id/OIP.13rWzIF8bYqfGwVZPhdZtAHaEu?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Francesinha", desc:"Sanduíche com várias carnes, queijo e molho especial", preco:"€14.00", img:"https://www.feelingportugal.com/wp-content/uploads/2016/03/francesinha_especial.jpg"},
+        {nome:"Arroz de Pato", desc:"Arroz cremoso com pato assado e chouriço", preco:"€13.50", img:"https://www.196flavors.com/wp-content/uploads/2018/04/arroz-de-pato-1-FP.jpg"},
+        {nome:"Cozido à Portuguesa", desc:"Cozido com várias carnes, enchidos e legumes", preco:"€15.00", img:"https://tse1.mm.bing.net/th/id/OIP.y8P58VIK8ZR4VHLQqPVtvQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Polvo à Lagareiro", desc:"Polvo cozido com batatas e azeFeijoada à Transmontanaite", preco:"€16.50", img:"https://th.bing.com/th/id/R.8df91e18cd7a76e3bd62bb3896bdecad?rik=7FfsdDdUZ8v9ZQ&pid=ImgRaw&r=0"},
+        {nome:"Leitão da Bairrada", desc:"Leitão assado com batatas fritas", preco:"€18.00", img:"https://th.bing.com/th/id/R.b557e4447b6391ba114d9ade8137f565?rik=%2f6vRrrDmbIlh6g&pid=ImgRaw&r=0"},
+        {nome:"Açorda de Marisco", desc:"Pão amanhecido com marisco e coentros", preco:"€17.50", img:"https://th.bing.com/th/id/R.6d7494a07205ce41e7be3f9eef7ee563?rik=NlwW3Grw%2bdodTQ&pid=ImgRaw&r=0"},
+        {nome:"Bife à Portuguesa", desc:"Bife com molho de vinho e presunto", preco:"€14.50", img:"https://tse3.mm.bing.net/th/id/OIP.eGe0Ypa2WCDQ2y8LoVb2fwHaDt?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Caldeirada de Peixe", desc:"Guisado de vários peixes com batata", preco:"€16.00", img:"https://feed.continente.pt/media/dejdymf0/caldeirada-de-peixe.jpg"},
+        {nome:"Chanfana", desc:"Cabrito estufado em vinho tinto", preco:"€15.50", img:"https://tse4.mm.bing.net/th/id/OIP.KvbgkWbOXxOVavP8dUA5CgHaEU?rs=1&pid=ImgDetMain&o=7&rm=3"}
+      ];
 
-        <!-- Lista de 20 pratos -->
-        <script>
-          const pratos = [
-            {nome:"Bacalhau à Brás", desc:"Bacalhau desfiado com batata palha, ovos e azeitonas", preco:"€12.50", img:"https://tse1.mm.bing.net/th/id/OIP.13rWzIF8bYqfGwVZPhdZtAHaEu?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Francesinha", desc:"Sanduíche com várias carnes, queijo e molho especial", preco:"€14.00", img:"https://www.feelingportugal.com/wp-content/uploads/2016/03/francesinha_especial.jpg"},
-            {nome:"Arroz de Pato", desc:"Arroz cremoso com pato assado e chouriço", preco:"€13.50", img:"https://www.196flavors.com/wp-content/uploads/2018/04/arroz-de-pato-1-FP.jpg"},
-            {nome:"Cozido à Portuguesa", desc:"Cozido com várias carnes, enchidos e legumes", preco:"€15.00", img:"https://tse1.mm.bing.net/th/id/OIP.y8P58VIK8ZR4VHLQqPVtvQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Polvo à Lagareiro", desc:"Polvo cozido com batatas e azeFeijoada à Transmontanaite", preco:"€16.50", img:"https://th.bing.com/th/id/R.8df91e18cd7a76e3bd62bb3896bdecad?rik=7FfsdDdUZ8v9ZQ&pid=ImgRaw&r=0"},
-            {nome:"Leitão da Bairrada", desc:"Leitão assado com batatas fritas", preco:"€18.00", img:"https://th.bing.com/th/id/R.b557e4447b6391ba114d9ade8137f565?rik=%2f6vRrrDmbIlh6g&pid=ImgRaw&r=0"},
-            {nome:"Açorda de Marisco", desc:"Pão amanhecido com marisco e coentros", preco:"€17.50", img:"https://th.bing.com/th/id/R.6d7494a07205ce41e7be3f9eef7ee563?rik=NlwW3Grw%2bdodTQ&pid=ImgRaw&r=0"},
-            {nome:"Bife à Portuguesa", desc:"Bife com molho de vinho e presunto", preco:"€14.50", img:"https://tse3.mm.bing.net/th/id/OIP.eGe0Ypa2WCDQ2y8LoVb2fwHaDt?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Caldeirada de Peixe", desc:"Guisado de vários peixes com batata", preco:"€16.00", img:"https://feed.continente.pt/media/dejdymf0/caldeirada-de-peixe.jpg"},
-            {nome:"Chanfana", desc:"Cabrito estufado em vinho tinto", preco:"€15.50", img:"https://tse4.mm.bing.net/th/id/OIP.KvbgkWbOXxOVavP8dUA5CgHaEU?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Sardinhas Assadas", desc:"Sardinhas grelhadas com batata cozida", preco:"€11.00", img:"https://tse2.mm.bing.net/th/id/OIP.tG48U1jmrHdjt8F7Aq7bCgHaEs?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Tripas à Moda do Porto", desc:"Tripas com feijão branco e carnes", preco:"€12.50", img:"https://solteiroscontracasados.com/wp-content/uploads/2020/08/tripas-a-moda-do-porto-752x440.jpg"},
-            {nome:"Alheira de Mirandela", desc:"Enchido de pão e carnes com ovo estrelado", preco:"€11.50", img:"https://th.bing.com/th/id/R.37e1efffcf27a534472c30628bafde0e?rik=JNoMSioeHECjiw&pid=ImgRaw&r=0"},
-            {nome:"Amêijoas à Bulhão Pato", desc:"Amêijoas cozidas com alho, coentros e azeite", preco:"€13.50", img:"https://www.amesacomaziza.com/wp-content/uploads/2020/07/IMG_20200710_160212_5-1536x829.jpg"},
-            {nome:"Carne de Porco à Alentejana", desc:"Carne de porco com amêijoas e batatas fritas", preco:"€14.00", img:"https://tse3.mm.bing.net/th/id/OIP.e_R0AfbvVvHOe_wZR5n_yAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Lulas Recheadas", desc:"Lulas recheadas com arroz e temperos", preco:"€15.00", img:"https://tse3.mm.bing.net/th/id/OIP.IA43I-4QTzi67jGQjrZEGAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Ensopado de Borrego", desc:"Borrego cozido lentamente com legumes", preco:"€16.50", img:"https://tse1.explicit.bing.net/th/id/OIP.6Cpkf3TDFytKfOI1yNfYTwHaFS?rs=1&pid=ImgDetMain&o=7&rm=3"},
-            {nome:"Bacalhau com Natas", desc:"Bacalhau gratinado com natas e batatas", preco:"€14.00", img:"https://static.madebychoices.pt/wp-content/uploads/2023/03/bacalhau-com-natas-vegetariano-2.jpg"}
-          ];
+      pratos.forEach(prato => {
+        document.write(`
+          <div class="relative group h-96 overflow-hidden rounded-2xl shadow-xl">
+            <img src="${prato.img}" alt="${prato.nome}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 
+                        opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <h3 class="text-2xl text-white font-bold">${prato.nome}</h3>
+              <p class="text-white mt-2">${prato.desc}</p>
+              <span class="mt-4 inline-block bg-primary text-white px-4 py-1 rounded">${prato.preco}</span>
+            </div>
+          </div>
+        `);
+      });
+    </script>
+  </div>
+</section>
 
-          pratos.forEach(prato => {
-            document.write(`
-              <div class="relative group h-96 overflow-hidden rounded-2xl shadow-xl">
-                <img src="${prato.img}" alt="${prato.nome}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <h3 class="text-2xl text-white font-bold">${prato.nome}</h3>
-                  <p class="text-white mt-2">${prato.desc}</p>
-                  <span class="mt-4 inline-block bg-primary text-white px-4 py-1 rounded">${prato.preco}</span>
-                </div>
-              </div>
-            `);
-          });
-        </script>
-      </div>
-    </section>
+<!-- Bebidas -->
+<section id="bebidas" class="mb-32">
+  <h2 class="text-4xl font-bold text-primary text-center mb-12">Bebidas Portuguesas</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <script>
+      const bebidas = [
+        {nome:"Vinho Verde", desc:"Vinho jovem e fresco da região do Minho", preco:"€3.50/copo", img:"https://th.bing.com/th/id/R.f54b4d4c5f5a719e5333e688f8fa8d4c?rik=uZLd1RwgEDZJXw&pid=ImgRaw&r=0"},
+        {nome:"Vinho do Porto", desc:"Vinho fortificado do Douro", preco:"€5.00/copo", img:"https://tse4.mm.bing.net/th/id/OIP.QvqNMN-rtjx9Nf6nNLQsdAHaFV?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Ginjinha", desc:"Licor de ginja típico de Óbidos", preco:"€2.50/dose", img:"https://tse2.mm.bing.net/th/id/OIP.xN2aF-7EdJj66nX65YstiwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Cerveja Sagres", desc:"Cerveja lager popular em Portugal", preco:"€2.50/copo", img:"https://i0.wp.com/brasileiroonline.co.uk/wp-content/uploads/2020/05/Sagres-Cerveja-330ml.jpg?fit=1280%2C800&ssl=1"},
+        {nome:"Cerveja Super Bock", desc:"Outra lager clássica portuguesa", preco:"€2.50/copo", img:"https://tse2.mm.bing.net/th/id/OIP.TjrZvchnvFGbbAwUbo_90AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"},
+        {nome:"Sumo de Laranja", desc:"Suco natural de laranja", preco:"€2.00/copo", img:"https://tse3.mm.bing.net/th/id/OIP.POAWmUYKHyNdsuRzaAZqXQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"}
+      ];
+
+      bebidas.forEach(bebida => {
+        document.write(`
+          <div class="relative group h-96 overflow-hidden rounded-2xl shadow-xl">
+            <img src="${bebida.img}" alt="${bebida.nome}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 
+                        opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <h3 class="text-2xl text-white font-bold">${bebida.nome}</h3>
+              <p class="text-white mt-2">${bebida.desc}</p>
+              <span class="mt-4 inline-block bg-primary text-white px-4 py-1 rounded">${bebida.preco}</span>
+            </div>
+          </div>
+        `);
+      });
+    </script>
+  </div>
+</section>
 
     <!-- Bebidas -->
     <section id="bebidas" class="mb-32">
@@ -130,3 +152,4 @@
 
 </body>
 </html>
+
